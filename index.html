@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Мария Свердлик - учитель рисования</title>
+    <title data-content="meta.title"></title>
     <meta
       name="description"
-      content="Портфолио учителя рисования: философия преподавания, CV, личные работы, работы учеников и контакты."
+      data-content-meta="description"
     >
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=6">
   </head>
   <body>
     <header class="site-header" data-header>
       <a class="brand" href="#home" aria-label="На главный экран">
-        <span class="brand-mark">МС</span>
-        <span class="brand-text">Мария Свердлик</span>
+        <span class="brand-mark" data-content="header.brandInitials"></span>
+        <span class="brand-text" data-content="header.brandName"></span>
       </a>
 
       <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" data-nav-toggle>
@@ -22,31 +22,24 @@
         <span></span>
       </button>
 
-      <nav class="site-nav" aria-label="Основная навигация" data-nav>
-        <a href="#about">Обо мне</a>
-        <a href="#philosophy">Философия</a>
-        <a href="#cv">CV</a>
-        <a href="#works">Мои работы</a>
-        <a href="#students">Работы учеников</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
+      <nav class="site-nav" aria-label="Основная навигация" data-nav data-content-list="header.nav"></nav>
     </header>
 
     <main class="snap-root">
       <section class="screen hero-screen" id="home" aria-label="Главный экран">
         <div class="screen-inner hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow">Портфолио учителя рисования</p>
-            <h1>Мария Свердлик</h1>
-            <p class="hero-lead">Учу видеть, пробовать и находить собственный художественный язык.</p>
+            <p class="eyebrow" data-content="hero.eyebrow"></p>
+            <h1 data-content="hero.title"></h1>
+            <p class="hero-lead" data-content="hero.lead"></p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#works">Смотреть работы</a>
-              <a class="button button-secondary" href="#contacts">Связаться</a>
+              <a class="button button-primary" data-content-href="hero.primaryButton.href" data-content="hero.primaryButton.text"></a>
+              <a class="button button-secondary" data-content-href="hero.secondaryButton.href" data-content="hero.secondaryButton.text"></a>
             </div>
           </div>
 
           <div class="hero-art" aria-label="Декоративная художественная композиция">
-            <img src="images/site/hero-placeholder.svg" alt="Цветная художественная композиция">
+            <img data-content-src="hero.artImage" data-content-alt="hero.artAlt">
           </div>
         </div>
       </section>
@@ -54,32 +47,15 @@
       <section class="screen about-screen" id="about">
         <div class="screen-inner two-column">
           <div class="section-copy">
-            <p class="eyebrow">Обо мне</p>
-            <h2>Спокойная мастерская, где техника помогает свободе.</h2>
-            <p>
-              Я преподаю рисунок, живопись и композицию детям, подросткам и взрослым. На занятиях мы
-              соединяем наблюдение, ремесло и личный интерес ученика, чтобы результат был не случайной
-              красивой картинкой, а понятным шагом вперед.
-            </p>
-            <div class="fact-grid">
-              <div>
-                <strong>12+</strong>
-                <span>лет практики</span>
-              </div>
-              <div>
-                <strong>4</strong>
-                <span>направления</span>
-              </div>
-              <div>
-                <strong>1:1</strong>
-                <span>индивидуальный темп</span>
-              </div>
-            </div>
+            <p class="eyebrow" data-content="about.eyebrow"></p>
+            <h2 data-content="about.heading"></h2>
+            <p data-content="about.text"></p>
+            <div class="fact-grid" data-content-list-facts="about.facts"></div>
           </div>
 
           <figure class="portrait-card">
-            <img src="images/site/about-placeholder.svg" alt="Портрет преподавателя">
-            <figcaption>Фото преподавателя можно заменить в папке images/site.</figcaption>
+            <img data-content-src="about.portraitImage" data-content-alt="about.portraitAlt">
+            <figcaption data-content="about.portraitCaption"></figcaption>
           </figure>
         </div>
       </section>
@@ -87,60 +63,23 @@
       <section class="screen philosophy-screen" id="philosophy">
         <div class="screen-inner">
           <div class="section-heading">
-            <p class="eyebrow">Философия</p>
-            <h2>Рисование начинается с внимания.</h2>
+            <p class="eyebrow" data-content="philosophy.eyebrow"></p>
+            <h2 data-content="philosophy.heading"></h2>
           </div>
 
-          <div class="principles">
-            <article>
-              <span>01</span>
-              <h3>Видеть форму</h3>
-              <p>Учимся разбирать предметы на объем, свет, силуэт и ритм, а не копировать поверхность.</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Не бояться пробы</h3>
-              <p>Черновики, быстрые наброски и ошибки становятся частью живого процесса обучения.</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Собирать ремесло</h3>
-              <p>Материалы, композиция, тон, цвет и линия постепенно превращаются в надежный инструмент.</p>
-            </article>
-            <article>
-              <span>04</span>
-              <h3>Сохранять голос</h3>
-              <p>Задача преподавателя - помочь ученику стать точнее, не делая его работы одинаковыми.</p>
-            </article>
-          </div>
+          <div class="principles" data-content-list-principles="philosophy.principles"></div>
         </div>
       </section>
 
       <section class="screen cv-screen" id="cv">
         <div class="screen-inner cv-layout">
           <div class="section-copy">
-            <p class="eyebrow">CV</p>
-            <h2>Опыт, который можно быстро считать.</h2>
-            <p>Этот раздел сделан как редактируемая временная шкала. Позже сюда можно добавить реальные даты, выставки, образование и проекты.</p>
+            <p class="eyebrow" data-content="cv.eyebrow"></p>
+            <h2 data-content="cv.heading"></h2>
+            <p data-content="cv.intro"></p>
           </div>
 
-          <div class="timeline" aria-label="Профессиональная биография">
-            <article>
-              <time>2012-2016</time>
-              <h3>Художественное образование</h3>
-              <p>Академический рисунок, живопись, композиция, история искусства.</p>
-            </article>
-            <article>
-              <time>2017-2021</time>
-              <h3>Преподавательская практика</h3>
-              <p>Индивидуальные занятия, мини-группы, подготовка портфолио и творческих проектов.</p>
-            </article>
-            <article>
-              <time>2022-2026</time>
-              <h3>Авторские курсы</h3>
-              <p>Курсы по акварели, графике, композиции и развитию визуального мышления.</p>
-            </article>
-          </div>
+          <div class="timeline" aria-label="Профессиональная биография" data-content-list-timeline="cv.timeline"></div>
         </div>
       </section>
 
@@ -148,8 +87,8 @@
         <div class="screen-inner gallery-layout">
           <div class="gallery-top">
             <div>
-              <p class="eyebrow">Мои работы</p>
-              <h2>Личная художественная практика.</h2>
+              <p class="eyebrow" data-content="works.eyebrow"></p>
+              <h2 data-content="works.heading"></h2>
             </div>
             <div class="filters" data-filters="works" aria-label="Фильтры личных работ"></div>
           </div>
@@ -162,8 +101,8 @@
         <div class="screen-inner gallery-layout">
           <div class="gallery-top">
             <div>
-              <p class="eyebrow">Работы учеников</p>
-              <h2>Разные руки, разные решения.</h2>
+              <p class="eyebrow" data-content="students.eyebrow"></p>
+              <h2 data-content="students.heading"></h2>
             </div>
             <div class="filters" data-filters="students" aria-label="Фильтры работ учеников"></div>
           </div>
@@ -175,31 +114,31 @@
       <section class="screen contacts-screen" id="contacts">
         <div class="screen-inner contacts-layout">
           <div class="section-copy">
-            <p class="eyebrow">Контакты</p>
-            <h2>Обсудим занятия, портфолио или творческую задачу.</h2>
-            <p>Можно написать в удобный мессенджер, отправить письмо или оставить короткую заявку.</p>
+            <p class="eyebrow" data-content="contacts.eyebrow"></p>
+            <h2 data-content="contacts.heading"></h2>
+            <p data-content="contacts.intro"></p>
 
             <address class="contact-list">
-              <a href="mailto:hello@example.com">hello@example.com</a>
-              <a href="tel:+70000000000">+7 000 000 00 00</a>
-              <span>Онлайн и очно</span>
+              <a data-content-href="mailto:contacts.email" data-content="contacts.email"></a>
+              <a data-content-href="tel:contacts.phone" data-content="contacts.phone"></a>
+              <span data-content="contacts.availability"></span>
             </address>
           </div>
 
           <form class="contact-form" action="#" method="post">
             <label>
-              <span>Имя</span>
-              <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться">
+              <span data-content="contacts.form.nameLabel"></span>
+              <input type="text" name="name" autocomplete="name" data-content-placeholder="contacts.form.namePlaceholder">
             </label>
             <label>
-              <span>Контакт</span>
-              <input type="text" name="contact" autocomplete="email" placeholder="Email или мессенджер">
+              <span data-content="contacts.form.contactLabel"></span>
+              <input type="text" name="contact" autocomplete="email" data-content-placeholder="contacts.form.contactPlaceholder">
             </label>
             <label>
-              <span>Сообщение</span>
-              <textarea name="message" rows="4" placeholder="Что хотите обсудить"></textarea>
+              <span data-content="contacts.form.messageLabel"></span>
+              <textarea name="message" rows="4" data-content-placeholder="contacts.form.messagePlaceholder"></textarea>
             </label>
-            <button class="button button-primary" type="submit">Отправить</button>
+            <button class="button button-primary" type="submit" data-content="contacts.form.submitText"></button>
           </form>
         </div>
       </section>
@@ -215,6 +154,6 @@
       </div>
     </dialog>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=6"></script>
   </body>
 </html>

@@ -1,3 +1,107 @@
+// Загрузка контента из JSON
+let contentData = null;
+
+async function loadContent() {
+  const response = await fetch('data/content.json');
+  contentData = await response.json();
+  renderContent();
+}
+
+function getValueByPath(path) {
+  return path.split('.').reduce((obj, key) => obj && obj[key], contentData);
+}
+
+function renderContent() {
+  // Простые текстовые значения
+  document.querySelectorAll('[data-content]').forEach(el => {
+    const path = el.dataset.content;
+    const value = getValueByPath(path);
+    if (value !== undefined) {
+      el.textContent = value;
+    }
+  });
+
+  // Meta description
+  const metaDesc = document.querySelector('[data-content-meta]');
+  if (metaDesc) {
+    const path = `meta.${metaDesc.dataset.contentMeta}`;
+    const value = getValueByPath(path);
+    if (value !== undefined) {
+      metaDesc.setAttribute('content', value);
+    }
+  }
+
+  // Ссылки с href
+  document.querySelectorAll('[data-content-href]').forEach(el => {
+    const path = el.dataset.contentHref;
+    const value = getValueByPath(path);
+    if (value !== undefined) {
+      if (path.includes('email')) {
+        el.href = `mailto:${value}`;
+      } else if (path.includes('phone')) {
+        el.href = `tel:${value.replace(/\s/g, '')}`;
+      } else {
+        el.href = value;
+      }
+    }
+  });
+
+  // Изображения
+  document.querySelectorAll('[data-content-src]').forEach(el => {
+    const srcPath = el.dataset.contentSrc;
+    const altPath = el.dataset.contentAlt;
+    const src = getValueByPath(srcPath);
+    const alt = altPath ? getValueByPath(altPath) : '';
+    if (src !== undefined) {
+      el.src = src;
+    }
+    if (alt !== undefined) {
+      el.alt = alt;
+    }
+  });
+
+  // Placeholder для input/textarea
+  document.querySelectorAll('[data-content-placeholder]').forEach(el => {
+    const path = el.dataset.contentPlaceholder;
+    const value = getValueByPath(path);
+    if (value !== undefined) {
+      el.placeholder = value;
+    }
+  });
+
+  // Навигация
+  const navContainer = document.querySelector('[data-content-list="header.nav"]');
+  if (navContainer && contentData?.header?.nav) {
+    navContainer.innerHTML = contentData.header.nav
+      .map(item => `<a href="${item.href}">${item.text}</a>`)
+      .join('');
+  }
+
+  // Факты (about.facts)
+  const factsContainer = document.querySelector('[data-content-list-facts="about.facts"]');
+  if (factsContainer && contentData?.about?.facts) {
+    factsContainer.innerHTML = contentData.about.facts
+      .map(fact => `<div><strong>${fact.value}</strong><span>${fact.label}</span></div>`)
+      .join('');
+  }
+
+  // Принципы (philosophy.principles)
+  const principlesContainer = document.querySelector('[data-content-list-principles="philosophy.principles"]');
+  if (principlesContainer && contentData?.philosophy?.principles) {
+    principlesContainer.innerHTML = contentData.philosophy.principles
+      .map(p => `<article><span>${p.number}</span><h3>${p.title}</h3><p>${p.text}</p></article>`)
+      .join('');
+  }
+
+  // Timeline (cv.timeline)
+  const timelineContainer = document.querySelector('[data-content-list-timeline="cv.timeline"]');
+  if (timelineContainer && contentData?.cv?.timeline) {
+    timelineContainer.innerHTML = contentData.cv.timeline
+      .map(item => `<article><time>${item.period}</time><h3>${item.title}</h3><p>${item.text}</p></article>`)
+      .join('');
+  }
+}
+
 const galleries = {
   works: {
     dataUrl: "data/works.json",
@@ -141,6 +245,7 @@ function updateActiveNav() {
 }
 
 Object.keys(galleries).forEach(loadGallery);
+loadContent();
 document.addEventListener("scroll", updateActiveNav, { passive: true });
 window.addEventListener("resize", updateActiveNav);
 updateActiveNav();
