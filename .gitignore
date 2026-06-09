@@ -1,37 +1,43 @@
 ```
 # Logs and temp files
 *.log
-*.tmp
-*.swp
 
 # Environment
 .env
 .env.local
 .env.*
 
-# Editors
-.vscode/
-.idea/
-
 # Dependencies
 node_modules/
-.venv/
-venv/
+
+# Editors
+.vscode/
+
+# Python
 __pycache__/
-.mypy_cache/
-.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
 
 # Build artifacts
 dist/
 build/
-target/
-.coverage
-coverage/
-htmlcov/
+*.js.map
 
-# System files
+# OS generated files
 .DS_Store
 Thumbs.db
+
+# Coverage reports
+coverage/
+htmlcov/
+*.coverage
+
+# IDE specific
+.idea/
+*.swp
+*.swo
+*.tmp
 
 # Compressed files
 *.zip
