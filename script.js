@@ -154,14 +154,35 @@ dialog.addEventListener("click", (event) => {
 async function loadGallery(key) {
   const state = galleries[key];
   const response = await fetch(state.dataUrl);
-  state.items = (await response.json()).sort((a, b) => a.order - b.order);
+  const rawData = await response.json();
+  
+  // Преобразуем новую структуру данных в плоский список для обратной совместимости
+  const categories = Object.values(rawData).sort((a, b) => a.order - b.order);
+  const flatItems = [];
+  
+  categories.forEach(category => {
+    if (category.works && Array.isArray(category.works)) {
+      category.works.forEach(work => {
+        flatItems.push({
+          ...work,
+          category: category.name,
+          categoryId: category.id
+        });
+      });
+    }
+  });
+  
+  state.items = flatItems;
+  state.categories = categories; // Сохраняем категории для меню
+  
   renderFilters(key);
   renderGallery(key);
 }
 
 function renderFilters(key) {
   const state = galleries[key];
-  const categories = ["Все", ...new Set(state.items.map((item) => item.category))];
+  // Формируем список категорий из структуры данных + "Все"
+  const categories = ["Все", ...state.categories.map(cat => cat.name)];
 
   state.filters.innerHTML = categories
     .map((category) => {
