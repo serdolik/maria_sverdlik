@@ -1,0 +1,102 @@
+[
+  {
+    "id": "work-00",
+    "title": "Серия - Thais",
+    "year": "2025",
+    "category": "Ювелирка",
+    "technique": "Латунь/Позолота",
+    "image": "images/works/photo_01.jpg",
+    "order": 10,
+    "description": "Демонстрационная работа для проверки карточек, пропорций и цветового ритма галереи."
+  },
+  {
+    "id": "work-01",
+    "title": "Всаднак",
+    "year": "2021",
+    "category": "3D sculping",
+    "technique": "Zbrush",
+    "image": "images/works/horse_01.jpg",
+    "order": 10,
+    "description": "Демонстрационная работа для проверки карточек, пропорций и цветового ритма галереи."
+  },
+  {
+    "id": "work-01",
+    "title": "Теплый натюрморт",
+    "year": "2026",
+    "category": "Живопись",
+    "technique": "Масло",
+    "image": "images/works/work-01.svg",
+    "order": 10,
+    "description": "Демонстрационная работа для проверки карточек, пропорций и цветового ритма галереи."
+  },
+  {
+    "id": "work-02",
+    "title": "Портрет в графике",
+    "year": "2025",
+    "category": "Графика",
+    "technique": "Уголь",
+    "image": "images/works/work-02.svg",
+    "order": 20,
+    "description": "Заглушка под графическую работу с более сдержанной палитрой."
+  },
+  {
+    "id": "work-03",
+    "title": "Синий вечер",
+    "year": "2025",
+    "category": "Акварель",
+    "technique": "Акварель",
+    "image": "images/works/work-03.svg",
+    "order": 30,
+    "description": "Мягкая цветовая композиция, имитирующая акварельный пейзаж."
+  },
+  {
+    "id": "work-04",
+    "title": "Композиция с линией",
+    "year": "2024",
+    "category": "Композиция",
+    "technique": "Смешанная техника",
+    "image": "images/works/work-04.svg",
+    "order": 40,
+    "description": "Контрастная заглушка для проверки работ с активной графикой."
+  },
+  {
+    "id": "work-05",
+    "title": "Красный стол",
+    "year": "2024",
+    "category": "Живопись",
+    "technique": "Акрил",
+    "image": "images/works/work-05.svg",
+    "order": 50,
+    "description": "Яркая живописная карточка для оценки насыщенных изображений."
+  },
+  {
+    "id": "work-06",
+    "title": "Тихий набросок",
+    "year": "2023",
+    "category": "Графика",
+    "technique": "Карандаш",
+    "image": "images/works/work-06.svg",
+    "order": 60,
+    "description": "Светлая графическая заглушка с большим количеством воздуха."
+  },
+  {
+    "id": "work-07",
+    "title": "Зеленый двор",
+    "year": "2023",
+    "category": "Акварель",
+    "technique": "Акварель",
+    "image": "images/works/work-07.svg",
+    "order": 70,
+    "description": "Демонстрационный пейзаж для проверки разных оттенков и деталей."
+  },
+  {
+    "id": "work-08",
+    "title": "Ритм предметов",
+    "year": "2022",
+    "category": "Композиция",
+    "technique": "Коллаж",
+    "image": "images/works/work-08.svg",
+    "order": 80,
+    "description": "Плотная композиционная карточка, чтобы галерея выглядела не однообразно."
+  }
+]

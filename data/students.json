@@ -1,0 +1,82 @@
+[
+  {
+    "id": "student-01",
+    "title": "Первый натюрморт",
+    "year": "2026",
+    "category": "Основы",
+    "technique": "Гуашь",
+    "image": "images/students/student-01.svg",
+    "order": 10,
+    "description": "Учебная демонстрационная работа: форма, тон и первые цветовые отношения."
+  },
+  {
+    "id": "student-02",
+    "title": "Линия и характер",
+    "year": "2026",
+    "category": "Графика",
+    "technique": "Маркер",
+    "image": "images/students/student-02.svg",
+    "order": 20,
+    "description": "Заглушка под ученическую графику с активной линией."
+  },
+  {
+    "id": "student-03",
+    "title": "Городской скетч",
+    "year": "2025",
+    "category": "Скетчинг",
+    "technique": "Линер и акварель",
+    "image": "images/students/student-03.svg",
+    "order": 30,
+    "description": "Карточка для примера учебного городского наброска."
+  },
+  {
+    "id": "student-04",
+    "title": "Цветовой круг",
+    "year": "2025",
+    "category": "Основы",
+    "technique": "Акрил",
+    "image": "images/students/student-04.svg",
+    "order": 40,
+    "description": "Демо-работа для раздела с упражнениями по цвету."
+  },
+  {
+    "id": "student-05",
+    "title": "Мягкий портрет",
+    "year": "2024",
+    "category": "Портрет",
+    "technique": "Пастель",
+    "image": "images/students/student-05.svg",
+    "order": 50,
+    "description": "Плейсхолдер под ученический портрет."
+  },
+  {
+    "id": "student-06",
+    "title": "Дом и тень",
+    "year": "2024",
+    "category": "Скетчинг",
+    "technique": "Карандаш",
+    "image": "images/students/student-06.svg",
+    "order": 60,
+    "description": "Пример для работ с перспективой, светом и архитектурной формой."
+  },
+  {
+    "id": "student-07",
+    "title": "Пятно и силуэт",
+    "year": "2023",
+    "category": "Графика",
+    "technique": "Тушь",
+    "image": "images/students/student-07.svg",
+    "order": 70,
+    "description": "Контрастная карточка для проверки визуального разнообразия ученической галереи."
+  },
+  {
+    "id": "student-08",
+    "title": "Свободная композиция",
+    "year": "2023",
+    "category": "Портрет",
+    "technique": "Смешанная техника",
+    "image": "images/students/student-08.svg",
+    "order": 80,
+    "description": "Разноцветная заглушка под более экспериментальную ученическую работу."
+  }
+]
