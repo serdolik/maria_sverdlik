@@ -1,16 +1,16 @@
 :root {
-  --paper: #f7f2e9;
-  --paper-soft: #fffaf1;
+  --paper: #ffffff;
+  --paper-soft: #9bc0cb;
   --ink: #1e1f1c;
-  --muted: #716b62;
+  --muted: #E8EEF2;
   --line: rgba(30, 31, 28, 0.14);
-  --clay: #b85f49;
+  --clay: #606F91;
   --moss: #496e5b;
   --ochre: #c49a45;
   --blue: #345c7a;
   --shadow: 0 22px 60px rgba(36, 29, 22, 0.16);
   --header-height: 72px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--ink);
   background: var(--paper);
 }
@@ -63,7 +63,7 @@ textarea {
   justify-content: space-between;
   padding: 0 clamp(18px, 4vw, 56px);
   border-bottom: 1px solid rgba(30, 31, 28, 0.08);
-  background: rgba(247, 242, 233, 0.82);
+  background: #A4A9B0;
   backdrop-filter: blur(18px);
 }
 
@@ -112,7 +112,7 @@ textarea {
   height: 44px;
   padding: 0;
   border: 1px solid var(--line);
-  background: rgba(255, 250, 241, 0.8);
+  background: rgba(209, 232, 241, 0.8);
 }
 
 .nav-toggle span {
@@ -179,7 +179,7 @@ p {
 
 h1,
 h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
   line-height: 0.98;
   letter-spacing: 0;
 }
